@@ -52,6 +52,7 @@
 #include "google/protobuf/descriptor.pb.h"
 #include "google/protobuf/has_bits.h"
 #include "google/protobuf/io/printer.h"
+#include "google/protobuf/io/strtod.h"
 #include "google/protobuf/wire_format.h"
 #include "google/protobuf/wire_format_lite.h"
 
