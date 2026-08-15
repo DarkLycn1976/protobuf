@@ -52,6 +52,9 @@ public abstract class AbstractMessageLite<
   @Override
   public byte[] toByteArray() {
     try {
+      if (getSerializedSize() == 0) {
+        return Internal.EMPTY_BYTE_ARRAY;
+      }
       final byte[] result = new byte[getSerializedSize()];
       final CodedOutputStream output = CodedOutputStream.newInstance(result);
       writeTo(output);
